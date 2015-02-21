@@ -36,6 +36,33 @@ describe("Loops", function() {
   });
 });
 
+describe("Looping over nested Loops", function(){
+  it("returns an empty string when input is 0", function(){
+    expect(gridGenerator(0)).toEqual("");
+  });
+  // all characters (even whitespaces) are values of the grid
+  it("creates a grid with 3 columns and rows when input is 3", function(){
+    expect(gridGenerator(3)).toEqual("# #\n # \n# #\n");
+    // # #
+    //  # 
+    // # #
+  });
+  it("creates a grid with 2 columns and rows when input is 2", function(){
+    expect(gridGenerator(2)).toEqual("# \n #\n")
+  });
+
+    // Research what a Pythagorean Triplet is.  What would make a PT larger than another?
+    it("finds the largest Pythagorean Triplet of a given value and returns an array of the Triplet", function(){
+    expect(largestTriplet(25)).toEqual([7,24,25]); // [15,20,25] Is smaller based on its b value
+  });
+  it("finds the largest Pythagorean Triplet of a given value", function(){
+    expect(largestTriplet(65)).toEqual([16,63,65]);
+  });
+  it("finds the largets Pythagorean Triplet within 'n' (aka the number argument passed)", function(){
+    expect(largestTriplet(66)).toEqual([16,63,65]);
+  })
+});
+
 describe("More looping over arrays", function() {
 
   // try to implement this join() function without using the built-in String#join function
