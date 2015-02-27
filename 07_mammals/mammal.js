@@ -22,7 +22,8 @@ var Cat = function(name, color){
 	this.color = color;
 }
 
-cat.prototype = Object.create(Mammal);
+Cat.prototype = Object.create(Mammal.prototype)
+
 
 // Mammal.prototype = {consturctor; }
 
